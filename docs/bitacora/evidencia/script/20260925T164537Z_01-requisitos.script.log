@@ -1,0 +1,32 @@
+== Sistema operativo y arquitectura ==
+Linux
+x86_64
+PRETTY_NAME="CachyOS"
+
+== Shell por defecto ==
+/usr/bin/bash
+
+== Espacio libre en disco (unidad del repositorio) ==
+S.ficheros     Tamaño Usados  Disp Uso% Montado en
+/dev/nvme0n1p6    98G    33G   66G  34% /home
+
+== Memoria disponible para Linux y Docker ==
+               total       usado       libre  compartido   búf/caché  disponible
+Mem:            15Gi       5,7Gi       5,2Gi       1,3Gi       5,7Gi       9,4Gi
+Inter:          15Gi       1,3Mi        15Gi
+
+== Herramientas de trabajo (Parte 0) ==
+OK git
+OK gh
+OK curl
+OK wget
+OK unzip
+OK jq
+OK tree
+OK htop
+OK tmux
+OK shellcheck
+
+== Git ==
+git version 2.55.0
+211205604+PabloVip@users.noreply.github.com
