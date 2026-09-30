@@ -1,0 +1,253 @@
+== Esperando a que oralab-26ai este healthy (max. 5 min) ==
+  intento 1: starting
+  intento 2: starting
+  intento 3: starting
+  intento 4: starting
+  intento 5: starting
+  intento 6: starting
+  intento 7: starting
+  intento 8: starting
+  intento 9: starting
+  intento 10: starting
+  intento 11: healthy
+== Estado final ==
+oralab-26ai Up 50 seconds (healthy)
+== Registro de arranque (docker logs) ==
+Starting Oracle Net Listener.
+Oracle Net Listener started.
+Starting Oracle AI Database instance FREE.
+Oracle AI Database instance FREE started.
+
+The Oracle base remains unchanged with value /opt/oracle
+
+SQL*Plus: Release 23.26.3.0.0 - Production on Fri Sep 25 17:19:08 2026
+Version 23.26.3.0.0
+
+Copyright (c) 1982, 2026, Oracle.  All rights reserved.
+
+
+Connected to:
+Oracle AI Database 26ai Free Release 23.26.3.0.0 - Develop, Learn, and Run for Free
+Version 23.26.3.0.0
+
+SQL> 
+User altered.
+
+SQL> 
+User altered.
+
+SQL> 
+Session altered.
+
+SQL> 
+User altered.
+
+SQL> Disconnected from Oracle AI Database 26ai Free Release 23.26.3.0.0 - Develop, Learn, and Run for Free
+Version 23.26.3.0.0
+#########################
+DATABASE IS READY TO USE!
+#########################
+The following output is now a tail of the alert.log:
+Completed: Pluggable database FREEPDB1 opened read write 
+Completed: ALTER DATABASE OPEN
+2026-09-25T17:19:09.187527+00:00
+FREEPDB1(3):TABLE AUDSYS.AUD$UNIFIED: ADDED INTERVAL PARTITION SYS_P496 (4470) VALUES LESS THAN (TIMESTAMP' 2026-09-26 00:00:00')
+2026-09-25T17:19:09.215144+00:00
+===========================================================
+Dumping current patch information
+===========================================================
+No patches have been applied
+===========================================================
+2026-09-25T17:19:09.677370+00:00
+FREEPDB1(3):Resize operation completed for file# 13, fname /opt/oracle/oradata/FREE/FREEPDB1/sysaux01.dbf, old size 409600K, new size 419840K
+2026-09-25T17:19:11.441995+00:00
+TABLE SYS.WRP$_REPORTS: ADDED AUTOLIST FRAGMENT SYS_P656 (3) VALUES (( 1509902213, TO_DATE(' 2026-09-21 00:00:00', 'syyyy-mm-dd hh24:mi:ss', 'nls_calendar=gregorian') ))
+TABLE SYS.WRP$_REPORTS_DETAILS: ADDED AUTOLIST FRAGMENT SYS_P657 (3) VALUES (( 1509902213, TO_DATE(' 2026-09-21 00:00:00', 'syyyy-mm-dd hh24:mi:ss', 'nls_calendar=gregorian') ))
+TABLE SYS.WRP$_REPORTS_TIME_BANDS: ADDED AUTOLIST FRAGMENT SYS_P660 (3) VALUES (( 1509902213, TO_DATE(' 2026-09-21 00:00:00', 'syyyy-mm-dd hh24:mi:ss', 'nls_calendar=gregorian') ))
+2026-09-25T17:29:07.064646+00:00
+Resize operation completed for file# 3, fname /opt/oracle/oradata/FREE/sysaux01.dbf, old size 624640K, new size 655360K
+2026-09-25T17:30:02.808102+00:00
+FREEPDB1(3):CREATE TABLESPACE TS_ACADEMIA DATAFILE '/opt/oracle/oradata/FREE/TS_ACADEMIA01.dbf' SIZE 50M AUTOEXTEND ON NEXT 10M MAXSIZE 500M
+FREEPDB1(3):Tablespace created: TS_ACADEMIA ts# 7
+FREEPDB1(3):Completed: CREATE TABLESPACE TS_ACADEMIA DATAFILE '/opt/oracle/oradata/FREE/TS_ACADEMIA01.dbf' SIZE 50M AUTOEXTEND ON NEXT 10M MAXSIZE 500M
+FREEPDB1(3):CREATE TABLESPACE TS_CLINICA DATAFILE '/opt/oracle/oradata/FREE/TS_CLINICA01.dbf' SIZE 50M AUTOEXTEND ON NEXT 10M MAXSIZE 500M
+FREEPDB1(3):Tablespace created: TS_CLINICA ts# 8
+FREEPDB1(3):Completed: CREATE TABLESPACE TS_CLINICA DATAFILE '/opt/oracle/oradata/FREE/TS_CLINICA01.dbf' SIZE 50M AUTOEXTEND ON NEXT 10M MAXSIZE 500M
+FREEPDB1(3):CREATE TABLESPACE TS_RETAIL DATAFILE '/opt/oracle/oradata/FREE/TS_RETAIL01.dbf' SIZE 50M AUTOEXTEND ON NEXT 10M MAXSIZE 500M
+2026-09-25T17:30:03.853774+00:00
+FREEPDB1(3):Tablespace created: TS_RETAIL ts# 9
+FREEPDB1(3):Completed: CREATE TABLESPACE TS_RETAIL DATAFILE '/opt/oracle/oradata/FREE/TS_RETAIL01.dbf' SIZE 50M AUTOEXTEND ON NEXT 10M MAXSIZE 500M
+FREEPDB1(3):CREATE TABLESPACE TS_LOGISTICA DATAFILE '/opt/oracle/oradata/FREE/TS_LOGISTICA01.dbf' SIZE 50M AUTOEXTEND ON NEXT 10M MAXSIZE 500M
+FREEPDB1(3):Tablespace created: TS_LOGISTICA ts# 10
+FREEPDB1(3):Completed: CREATE TABLESPACE TS_LOGISTICA DATAFILE '/opt/oracle/oradata/FREE/TS_LOGISTICA01.dbf' SIZE 50M AUTOEXTEND ON NEXT 10M MAXSIZE 500M
+FREEPDB1(3):CREATE TABLESPACE TS_FINTECH DATAFILE '/opt/oracle/oradata/FREE/TS_FINTECH01.dbf' SIZE 50M AUTOEXTEND ON NEXT 10M MAXSIZE 500M
+FREEPDB1(3):Tablespace created: TS_FINTECH ts# 11
+FREEPDB1(3):Completed: CREATE TABLESPACE TS_FINTECH DATAFILE '/opt/oracle/oradata/FREE/TS_FINTECH01.dbf' SIZE 50M AUTOEXTEND ON NEXT 10M MAXSIZE 500M
+2026-09-25T17:33:14.868026+00:00
+FREEPDB1(3):CREATE TABLESPACE TS_ACADEMIA DATAFILE '/opt/oracle/oradata/FREE/TS_ACADEMIA01.dbf' SIZE 50M AUTOEXTEND ON NEXT 10M MAXSIZE 500M
+FREEPDB1(3):ORA-1543 signalled during: CREATE TABLESPACE TS_ACADEMIA DATAFILE '/opt/oracle/oradata/FREE/TS_ACADEMIA01.dbf' SIZE 50M AUTOEXTEND ON NEXT 10M MAXSIZE 500M...
+2026-09-25T17:36:07.146572+00:00
+FREEPDB1(3):JIT: pid 1663 requesting full stop
+FREEPDB1(3):JIT: pid 1663 requesting full stop
+FREEPDB1(3):JIT: pid 1663 requesting full stop
+FREEPDB1(3):JIT: pid 1663 requesting full stop
+FREEPDB1(3):JIT: pid 1663 requesting full stop
+FREEPDB1(3):DROP TABLESPACE TS_ACADEMIA INCLUDING CONTENTS AND DATAFILES
+FREEPDB1(3):Deleted file /opt/oracle/oradata/FREE/TS_ACADEMIA01.dbf
+FREEPDB1(3):Tablespace dropped: TS_ACADEMIA ts# 7
+FREEPDB1(3):Completed: DROP TABLESPACE TS_ACADEMIA INCLUDING CONTENTS AND DATAFILES
+FREEPDB1(3):DROP TABLESPACE TS_CLINICA INCLUDING CONTENTS AND DATAFILES
+2026-09-25T17:36:08.377663+00:00
+FREEPDB1(3):Deleted file /opt/oracle/oradata/FREE/TS_CLINICA01.dbf
+FREEPDB1(3):Tablespace dropped: TS_CLINICA ts# 8
+FREEPDB1(3):Completed: DROP TABLESPACE TS_CLINICA INCLUDING CONTENTS AND DATAFILES
+FREEPDB1(3):DROP TABLESPACE TS_RETAIL INCLUDING CONTENTS AND DATAFILES
+FREEPDB1(3):Deleted file /opt/oracle/oradata/FREE/TS_RETAIL01.dbf
+FREEPDB1(3):Tablespace dropped: TS_RETAIL ts# 9
+FREEPDB1(3):Completed: DROP TABLESPACE TS_RETAIL INCLUDING CONTENTS AND DATAFILES
+FREEPDB1(3):DROP TABLESPACE TS_LOGISTICA INCLUDING CONTENTS AND DATAFILES
+FREEPDB1(3):Deleted file /opt/oracle/oradata/FREE/TS_LOGISTICA01.dbf
+FREEPDB1(3):Tablespace dropped: TS_LOGISTICA ts# 10
+FREEPDB1(3):Completed: DROP TABLESPACE TS_LOGISTICA INCLUDING CONTENTS AND DATAFILES
+FREEPDB1(3):DROP TABLESPACE TS_FINTECH INCLUDING CONTENTS AND DATAFILES
+FREEPDB1(3):Deleted file /opt/oracle/oradata/FREE/TS_FINTECH01.dbf
+FREEPDB1(3):Tablespace dropped: TS_FINTECH ts# 11
+FREEPDB1(3):Completed: DROP TABLESPACE TS_FINTECH INCLUDING CONTENTS AND DATAFILES
+FREEPDB1(3):CREATE TABLESPACE TS_ACADEMIA DATAFILE '/opt/oracle/oradata/FREE/TS_ACADEMIA01.dbf' SIZE 50M AUTOEXTEND ON NEXT 10M MAXSIZE 500M
+2026-09-25T17:36:09.600866+00:00
+FREEPDB1(3):Tablespace created: TS_ACADEMIA ts# 7
+FREEPDB1(3):Completed: CREATE TABLESPACE TS_ACADEMIA DATAFILE '/opt/oracle/oradata/FREE/TS_ACADEMIA01.dbf' SIZE 50M AUTOEXTEND ON NEXT 10M MAXSIZE 500M
+FREEPDB1(3):CREATE TABLESPACE TS_CLINICA DATAFILE '/opt/oracle/oradata/FREE/TS_CLINICA01.dbf' SIZE 50M AUTOEXTEND ON NEXT 10M MAXSIZE 500M
+FREEPDB1(3):Tablespace created: TS_CLINICA ts# 8
+FREEPDB1(3):Completed: CREATE TABLESPACE TS_CLINICA DATAFILE '/opt/oracle/oradata/FREE/TS_CLINICA01.dbf' SIZE 50M AUTOEXTEND ON NEXT 10M MAXSIZE 500M
+FREEPDB1(3):CREATE TABLESPACE TS_RETAIL DATAFILE '/opt/oracle/oradata/FREE/TS_RETAIL01.dbf' SIZE 50M AUTOEXTEND ON NEXT 10M MAXSIZE 500M
+FREEPDB1(3):Tablespace created: TS_RETAIL ts# 9
+FREEPDB1(3):Completed: CREATE TABLESPACE TS_RETAIL DATAFILE '/opt/oracle/oradata/FREE/TS_RETAIL01.dbf' SIZE 50M AUTOEXTEND ON NEXT 10M MAXSIZE 500M
+FREEPDB1(3):CREATE TABLESPACE TS_LOGISTICA DATAFILE '/opt/oracle/oradata/FREE/TS_LOGISTICA01.dbf' SIZE 50M AUTOEXTEND ON NEXT 10M MAXSIZE 500M
+FREEPDB1(3):Tablespace created: TS_LOGISTICA ts# 10
+FREEPDB1(3):Completed: CREATE TABLESPACE TS_LOGISTICA DATAFILE '/opt/oracle/oradata/FREE/TS_LOGISTICA01.dbf' SIZE 50M AUTOEXTEND ON NEXT 10M MAXSIZE 500M
+FREEPDB1(3):CREATE TABLESPACE TS_FINTECH DATAFILE '/opt/oracle/oradata/FREE/TS_FINTECH01.dbf' SIZE 50M AUTOEXTEND ON NEXT 10M MAXSIZE 500M
+FREEPDB1(3):Tablespace created: TS_FINTECH ts# 11
+FREEPDB1(3):Completed: CREATE TABLESPACE TS_FINTECH DATAFILE '/opt/oracle/oradata/FREE/TS_FINTECH01.dbf' SIZE 50M AUTOEXTEND ON NEXT 10M MAXSIZE 500M
+2026-09-25T17:39:07.226960+00:00
+Resize operation completed for file# 3, fname /opt/oracle/oradata/FREE/sysaux01.dbf, old size 655360K, new size 665600K
+FREEPDB1(3):Resize operation completed for file# 13, fname /opt/oracle/oradata/FREE/FREEPDB1/sysaux01.dbf, old size 419840K, new size 440320K
+Stopping container.
+SIGTERM received, shutting down database!
+
+SQL*Plus: Release 23.26.3.0.0 - Production on Fri Sep 25 18:10:13 2026
+Version 23.26.3.0.0
+
+Copyright (c) 1982, 2026, Oracle.  All rights reserved.
+
+
+Connected to:
+Oracle AI Database 26ai Free Release 23.26.3.0.0 - Develop, Learn, and Run for Free
+Version 23.26.3.0.0
+
+SQL> 2026-09-25T18:10:13.866484+00:00
+Shutting down ORACLE instance (immediate) (OS id: 3785)
+Shutdown is initiated by sqlplus@82f7121218db (TNS V1-V3).
+Stopping background process SMCO.
+Shutting down instance: further logons disabled
+2026-09-25T18:10:14.036167+00:00
+Stopping background process CJQ0
+Stopping background process MMNL.
+2026-09-25T18:10:14.117479+00:00
+Process termination requested for pid 598 (db_q004_FREE) [source = rdbms], [info = 2] [request issued by pid: 590, uid: 54321]
+Stopping background process MMON.
+alter pluggable database all close immediate
+2026-09-25T18:10:14.247158+00:00
+FREEPDB1(3):JIT: pid 3785 requesting stop
+2026-09-25T18:10:14.251157+00:00
+FREEPDB1(3):Stopped service freepdb1
+Completed: Pluggable database FREEPDB1 closed services=None
+Completed: alter pluggable database all close immediate
+PDB$SEED(2):JIT: pid 3785 requesting stop
+License high water mark = 5
+
+Data Pump shutdown in progress
+ALTER DATABASE CLOSE NORMAL
+alter pluggable database all close immediate
+Completed: alter pluggable database all close immediate
+alter pluggable database all close immediate
+Completed: alter pluggable database all close immediate
+2026-09-25T18:10:15.432726+00:00
+Stopping change tracking
+Database closed.
+Database dismounted.
+2026-09-25T18:10:16.505135+00:00
+Thread 1 closed at log sequence 2
+Successful close of redo thread 1
+2026-09-25T18:10:16.544366+00:00
+Completed: ALTER DATABASE CLOSE NORMAL
+ALTER DATABASE DISMOUNT
+Completed: ALTER DATABASE DISMOUNT
+2026-09-25T18:10:16.588100+00:00
+JIT: pid 3785 requesting stop
+JIT: pid 3785 requesting stop
+ORACLE instance shut down.
+SQL> Disconnected from Oracle AI Database 26ai Free Release 23.26.3.0.0 - Develop, Learn, and Run for Free
+Version 23.26.3.0.0
+
+LSNRCTL for Linux: Version 23.26.3.0.0 - Production on 25-SEP-2026 18:10:17
+
+Copyright (c) 1991, 2026, Oracle.  All rights reserved.
+
+Connecting to (DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=0.0.0.0)(PORT=1521)))
+The command completed successfully
+Starting Oracle Net Listener.
+Oracle Net Listener started.
+Starting Oracle AI Database instance FREE.
+Oracle AI Database instance FREE started.
+
+The Oracle base remains unchanged with value /opt/oracle
+
+SQL*Plus: Release 23.26.3.0.0 - Production on Wed Sep 30 16:30:37 2026
+Version 23.26.3.0.0
+
+Copyright (c) 1982, 2026, Oracle.  All rights reserved.
+
+
+Connected to:
+Oracle AI Database 26ai Free Release 23.26.3.0.0 - Develop, Learn, and Run for Free
+Version 23.26.3.0.0
+
+SQL> 
+User altered.
+
+SQL> 
+User altered.
+
+SQL> 
+Session altered.
+
+SQL> 
+User altered.
+
+SQL> Disconnected from Oracle AI Database 26ai Free Release 23.26.3.0.0 - Develop, Learn, and Run for Free
+Version 23.26.3.0.0
+#########################
+DATABASE IS READY TO USE!
+#########################
+The following output is now a tail of the alert.log:
+CLID: P
+PDB$SEED(2):Autotune of undo retention is turned on. 
+2026-09-30T16:30:36.580149+00:00
+PDB$SEED(2):Opening pdb with Resource Manager plan: DEFAULT_PLAN
+FREEPDB1(3):Autotune of undo retention is turned on. 
+FREEPDB1(3):Opening pdb with Resource Manager plan: DEFAULT_PLAN
+Completed: Pluggable database FREEPDB1 opened read write 
+Completed: ALTER DATABASE OPEN
+2026-09-30T16:30:37.791348+00:00
+FREEPDB1(3):TABLE AUDSYS.AUD$UNIFIED: ADDED INTERVAL PARTITION SYS_P516 (4475) VALUES LESS THAN (TIMESTAMP' 2026-10-01 00:00:00')
+2026-09-30T16:30:37.978545+00:00
+===========================================================
+Dumping current patch information
+===========================================================
+No patches have been applied
+===========================================================
+2026-09-30T16:30:39.278368+00:00
+TABLE SYS.WRP$_REPORTS: ADDED AUTOLIST FRAGMENT SYS_P696 (4) VALUES (( 1509902213, TO_DATE(' 2026-09-28 00:00:00', 'syyyy-mm-dd hh24:mi:ss', 'nls_calendar=gregorian') ))
+TABLE SYS.WRP$_REPORTS_DETAILS: ADDED AUTOLIST FRAGMENT SYS_P697 (4) VALUES (( 1509902213, TO_DATE(' 2026-09-28 00:00:00', 'syyyy-mm-dd hh24:mi:ss', 'nls_calendar=gregorian') ))
+TABLE SYS.WRP$_REPORTS_TIME_BANDS: ADDED AUTOLIST FRAGMENT SYS_P700 (4) VALUES (( 1509902213, TO_DATE(' 2026-09-28 00:00:00', 'syyyy-mm-dd hh24:mi:ss', 'nls_calendar=gregorian') ))
