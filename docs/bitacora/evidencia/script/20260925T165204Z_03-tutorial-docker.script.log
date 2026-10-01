@@ -1,0 +1,359 @@
+Script iniciado en 2026-09-25 18:52:04+02:00 [TERM="xterm-kitty" TTY="/dev/pts/1" COLUMNS="207" LINES="58"]
+    [38;2;0;0;0m▄[38;2;0;0;0m[48;2;98;98;98m▀[0m[38;2;0;0;0m▄ [38;2;0;0;0m▄[38;2;0;0;0m[48;2;230;115;65m▀[0m[38;2;0;0;0m▄                ╭───────────────────────────────────╮  
+    [38;2;0;0;0m[48;2;0;0;0m▀[0m[38;2;98;98;98m[48;2;197;197;197m▀[0m[38;2;0;0;0m[48;2;98;98;98m▀[0m[38;2;0;0;0m▄[38;2;0;0;0m[48;2;65;65;74m▀[0m[38;2;230;115;65m[48;2;230;115;65m▀[0m[38;2;0;0;0m[48;2;0;0;0m▀[0m[38;2;0;0;0m▄[38;2;0;0;0m[48;2;98;98;98m▀[0m[38;2;0;0;0m▄     [38;2;0;0;0m▄ [38;2;0;0;0m▄     │ [34m[39m  kernel  [34m       7.2.7-1-cachyos[39m │
+    [38;2;0;0;0m[48;2;0;0;0m▀[0m[38;2;197;197;197m[48;2;98;98;98m▀[0m[38;2;98;98;98m[48;2;98;98;98m▀[0m[38;2;65;65;74m[48;2;65;65;74m▀[0m[38;2;180;74;57m[48;2;230;115;65m▀[0m[38;2;230;115;65m[48;2;180;74;57m▀[0m[38;2;65;65;74m[48;2;65;65;74m▀[0m[38;2;98;98;98m[48;2;197;197;197m▀[0m[38;2;98;98;98m[48;2;98;98;98m▀[0m[38;2;0;0;0m[48;2;0;0;0m▀[0m    [38;2;0;0;0m[48;2;0;0;0m▀[0m[38;2;98;98;98m[48;2;98;98;98m▀[0m[38;2;0;0;0m[48;2;98;98;98m▀[0m[38;2;98;98;98m[48;2;98;98;98m▀[0m[38;2;0;0;0m[48;2;0;0;0m▀[0m    │   uptime       1 hour, 7 minutes │
+    [38;2;0;0;0m[48;2;0;0;0m▀[0m[38;2;65;65;74m[48;2;98;98;98m▀[0m[38;2;230;115;65m[48;2;65;65;74m▀[0m[38;2;180;74;57m[48;2;230;115;65m▀[0m[38;2;230;115;65m[48;2;230;115;65m▀[0m[38;2;65;65;74m[48;2;230;115;65m▀[0m[38;2;65;65;74m[48;2;230;115;65m▀[0m[38;2;197;197;197m[48;2;65;65;74m▀[0m[38;2;98;98;98m[48;2;98;98;98m▀[0m[38;2;0;0;0m[48;2;98;98;98m▀[0m[38;2;0;0;0m▄    [38;2;0;0;0m[48;2;0;0;0m▀[0m[38;2;98;98;98m[48;2;230;115;65m▀[0m[38;2;98;98;98m[48;2;230;115;65m▀[0m[38;2;0;0;0m[48;2;0;0;0m▀[0m    │ [34m[39m  shell   [34m                  bash[39m │
+ [38;2;0;0;0m▄[38;2;0;0;0m▄[38;2;0;0;0m[48;2;0;0;0m▀[0m[38;2;230;115;65m[48;2;65;65;74m▀[0m[38;2;230;115;65m[48;2;230;115;65m▀[0m[38;2;65;65;74m[48;2;230;115;65m▀[0m[38;2;230;115;65m[48;2;230;115;65m▀[0m[38;2;65;65;74m[48;2;230;115;65m▀[0m[38;2;65;65;74m[48;2;230;115;65m▀[0m[38;2;65;65;74m[48;2;230;115;65m▀[0m[38;2;65;65;74m[48;2;230;115;65m▀[0m[38;2;65;65;74m[48;2;230;115;65m▀[0m[38;2;98;98;98m[48;2;65;65;74m▀[0m[38;2;0;0;0m[48;2;0;0;0m▀[0m   [38;2;0;0;0m▄[38;2;0;0;0m[48;2;180;74;57m▀[0m[38;2;98;98;98m[48;2;180;74;57m▀[0m[38;2;0;0;0m[48;2;0;0;0m▀[0m     │ [32m[39m  mem     [32m  5.93 GiB / 15.06 GiB[39m │
+[38;2;0;0;0m▀[38;2;180;74;57m[48;2;0;0;0m▀[0m[38;2;180;74;57m[48;2;180;74;57m▀[0m[38;2;65;65;74m[48;2;65;65;74m▀[0m[38;2;205;189;49m[48;2;205;189;49m▀[0m[38;2;65;65;74m[48;2;65;65;74m▀[0m[38;2;230;115;65m[48;2;230;115;65m▀[0m[38;2;230;115;65m[48;2;65;65;74m▀[0m[38;2;230;115;65m[48;2;65;65;74m▀[0m[38;2;65;65;74m[48;2;0;0;0m▀[0m[38;2;65;65;74m[48;2;255;238;49m▀[0m[38;2;65;65;74m[48;2;255;238;49m▀[0m[38;2;65;65;74m[48;2;0;0;0m▀[0m[38;2;98;98;98m[48;2;98;98;98m▀[0m[38;2;0;0;0m[48;2;65;65;74m▀[0m[38;2;0;0;0m▄[38;2;0;0;0m▄[38;2;0;0;0m▄[38;2;0;0;0m[48;2;65;65;74m▀[0m[38;2;65;65;74m[48;2;65;65;74m▀[0m[38;2;0;0;0m[48;2;0;0;0m▀[0m      │ [32m[39m  cpu%    [32m                    7%[39m │
+[38;2;0;0;0m▀[38;2;180;74;57m[48;2;0;0;0m▀[0m[38;2;180;74;57m[48;2;0;0;0m▀[0m[38;2;180;74;57m[48;2;0;0;0m▀[0m[38;2;65;65;74m[48;2;0;0;0m▀[0m[38;2;98;98;98m[48;2;197;197;197m▀[0m[38;2;98;98;98m[48;2;197;197;197m▀[0m[38;2;0;0;0m[48;2;180;74;57m▀[0m[38;2;255;238;49m[48;2;0;0;0m▀[0m[38;2;180;74;57m[48;2;255;238;49m▀[0m[38;2;255;238;49m[48;2;255;238;49m▀[0m[38;2;255;238;49m[48;2;0;0;0m▀[0m[38;2;0;0;0m[48;2;180;74;57m▀[0m[38;2;98;98;98m[48;2;230;115;65m▀[0m[38;2;65;65;74m[48;2;230;115;65m▀[0m[38;2;98;98;98m[48;2;65;65;74m▀[0m[38;2;98;98;98m[48;2;65;65;74m▀[0m[38;2;98;98;98m[48;2;98;98;98m▀[0m[38;2;65;65;74m[48;2;98;98;98m▀[0m[38;2;0;0;0m[48;2;0;0;0m▀[0m       │ [34m󰢮[39m  gpu%    [34m                  0.0%[39m │
+     [38;2;0;0;0m▀[38;2;230;115;65m[48;2;0;0;0m▀[0m[38;2;230;115;65m[48;2;0;0;0m▀[0m[38;2;180;74;57m[48;2;230;115;65m▀[0m[38;2;0;0;0m[48;2;230;115;65m▀[0m[38;2;0;0;0m[48;2;230;115;65m▀[0m[38;2;180;74;57m[48;2;230;115;65m▀[0m[38;2;230;115;65m[48;2;230;115;65m▀[0m[38;2;230;115;65m[48;2;230;115;65m▀[0m[38;2;230;115;65m[48;2;65;65;74m▀[0m[38;2;230;115;65m[48;2;65;65;74m▀[0m[38;2;230;115;65m[48;2;65;65;74m▀[0m[38;2;65;65;74m[48;2;230;115;65m▀[0m[38;2;230;115;65m[48;2;230;115;65m▀[0m[38;2;0;0;0m[48;2;0;0;0m▀[0m       │   pkgs                      1455 │
+       [38;2;0;0;0m▄[38;2;0;0;0m[48;2;255;238;49m▀[0m[38;2;65;65;74m[48;2;205;189;49m▀[0m[38;2;65;65;74m[48;2;65;65;74m▀[0m[38;2;65;65;74m[48;2;230;115;65m▀[0m[38;2;65;65;74m[48;2;230;115;65m▀[0m[38;2;230;115;65m[48;2;65;65;74m▀[0m[38;2;230;115;65m[48;2;65;65;74m▀[0m[38;2;65;65;74m[48;2;180;74;57m▀[0m[38;2;180;74;57m[48;2;0;0;0m▀[0m[38;2;230;115;65m[48;2;0;0;0m▀[0m[38;2;230;115;65m[48;2;180;74;57m▀[0m[38;2;180;74;57m[48;2;65;65;74m▀[0m[38;2;0;0;0m[48;2;0;0;0m▀[0m      │ [34m[39m  user    [34m              pablovip[39m │
+       [38;2;0;0;0m▀[38;2;230;115;65m[48;2;0;0;0m▀[0m[38;2;255;238;49m[48;2;65;65;74m▀[0m[38;2;65;65;74m[48;2;180;74;57m▀[0m[38;2;230;115;65m[48;2;65;65;74m▀[0m[38;2;230;115;65m[48;2;230;115;65m▀[0m[38;2;230;115;65m[48;2;230;115;65m▀[0m[38;2;180;74;57m[48;2;0;0;0m▀[0m[38;2;0;0;0m▀ [38;2;0;0;0m▄[38;2;0;0;0m[48;2;180;74;57m▀[0m[38;2;65;65;74m[48;2;180;74;57m▀[0m[38;2;0;0;0m[48;2;0;0;0m▀[0m      │   hname                 pablovip │
+       [38;2;0;0;0m▄[38;2;0;0;0m[48;2;180;74;57m▀[0m[38;2;65;65;74m[48;2;180;74;57m▀[0m[38;2;65;65;74m[48;2;65;65;74m▀[0m[38;2;65;65;74m[48;2;65;65;74m▀[0m[38;2;98;98;98m[48;2;98;98;98m▀[0m[38;2;98;98;98m[48;2;98;98;98m▀[0m[38;2;0;0;0m[48;2;0;0;0m▀[0m   [38;2;0;0;0m▀[38;2;0;0;0m▀       │ [36m󰻀[39m  distro  [36m               CachyOS[39m │
+        [38;2;0;0;0m▀[38;2;0;0;0m▀[38;2;0;0;0m[48;2;0;0;0m▀[0m[38;2;230;115;65m[48;2;0;0;0m▀[0m[38;2;230;115;65m[48;2;0;0;0m▀[0m[38;2;0;0;0m▀             ╰───────────────────────────────────╯  
+]0;pablovip@pablovip:~/oracle-database-lab[?2004h[pablovip@pablovip oracle-database-lab]$ [7mdocker version[27m
+[7mdocker info[27m
+[7mdocker run hello-world[27m
+[7mdocker ps[27m
+[7mdocker ps -a[27m
+[7mdocker pull alpine:3.20[27m
+[7mdocker images[27m
+[7mdocker run -it --name prueba alpine:3.20 sh[27m[A[A[A[A[A[A[Adocker version
+docker info
+docker run hello-world
+docker ps
+docker ps -a
+docker pull alpine:3.20
+docker images
+docker run -it --name prueba alpine:3.20 sh
+[?2004lClient:
+ Version:           29.8.1
+ API version:       1.56
+ Go version:        go1.27.1-X:nodwarf5
+ Git commit:        4a63305d74
+ Built:             Fri Sep 18 16:01:02 2026
+ OS/Arch:           linux/amd64
+ Context:           default
+
+Server:
+ Engine:
+  Version:          29.8.1
+  API version:      1.56 (minimum version 1.40)
+  Go version:       go1.27.1-X:nodwarf5
+  Git commit:       464cd50c3d
+  Built:            Fri Sep 18 16:01:02 2026
+  OS/Arch:          linux/amd64
+  Experimental:     false
+ containerd:
+  Version:          v2.4.0
+  GitCommit:        a7fe631d96c08fb14cf8eff0afdc280e99c30a94.m
+ runc:
+  Version:          1.5.1
+  GitCommit:        1.5.1-1-0-gce23c4c-dirty
+ docker-init:
+  Version:          0.19.0
+  GitCommit:        de40ad0
+Client:
+ Version:    29.8.1
+ Context:    default
+ Debug Mode: false
+ Plugins:
+  buildx: Docker Buildx (Docker Inc.)
+    Version:  0.37.1
+    Path:     /usr/lib/docker/cli-plugins/docker-buildx
+  compose: Docker Compose (Docker Inc.)
+    Version:  5.5.1
+    Path:     /usr/lib/docker/cli-plugins/docker-compose
+
+Server:
+ Containers: 0
+  Running: 0
+  Paused: 0
+  Stopped: 0
+ Images: 1
+ Server Version: 29.8.1
+ Storage Driver: overlayfs
+  driver-type: io.containerd.snapshotter.v1
+ Logging Driver: json-file
+ Cgroup Driver: systemd
+ Cgroup Version: 2
+ Plugins:
+  Volume: local
+  Network: bridge host ipvlan macvlan null overlay
+  Log: awslogs fluentd gcplogs gelf journald json-file local splunk syslog
+ CDI spec directories:
+  /etc/cdi
+  /var/run/cdi
+ Swarm: inactive
+ Runtimes: io.containerd.runc.v2 runc
+ Default Runtime: runc
+ Init Binary: docker-init
+ containerd version: a7fe631d96c08fb14cf8eff0afdc280e99c30a94.m
+ runc version: 1.5.1-1-0-gce23c4c-dirty
+ init version: de40ad0
+ Security Options:
+  seccomp
+   Profile: builtin
+  cgroupns
+ Kernel Version: 7.2.7-1-cachyos
+ Operating System: CachyOS
+ OSType: linux
+ Architecture: x86_64
+ CPUs: 14
+ Total Memory: 15.06GiB
+ Name: pablovip
+ ID: 48aea36a-2288-4515-af9a-ea7cea6299e5
+ Docker Root Dir: /var/lib/docker
+ Debug Mode: false
+ Experimental: false
+ Insecure Registries:
+  ::1/128
+  127.0.0.0/8
+ Live Restore Enabled: false
+ Firewall Backend: iptables
+  EnableUserlandProxy: true
+  UserlandProxyPath: /usr/bin/docker-proxy
+
+
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+
+To generate this message, Docker took the following steps:
+ 1. The Docker client contacted the Docker daemon.
+ 2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
+    (amd64)
+ 3. The Docker daemon created a new container from that image which runs the
+    executable that produces the output you are currently reading.
+ 4. The Docker daemon streamed that output to the Docker client, which sent it
+    to your terminal.
+
+To try something more ambitious, you can run an Ubuntu container with:
+ $ docker run -it ubuntu bash
+
+Share images, automate workflows, and more with a free Docker ID:
+ https://hub.docker.com/
+
+For more examples and ideas, visit:
+ https://docs.docker.com/get-started/
+
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+CONTAINER ID   IMAGE         COMMAND    CREATED                  STATUS                              PORTS     NAMES
+4f4c4071a4a7   hello-world   "/hello"   Less than a second ago   Exited (0) Less than a second ago             gallant_panini
+3.20: Pulling from library/alpine
+
+[1A[2K25f1d6b1951a: Pulling fs layer [1B
+[1A[2K3a030ca3f633: Download complete [1B
+[1A[2Kd4050d56ebf2: Download complete [1B[3A[2K25f1d6b1951a: Downloading [============================>                      ]  2.097MB/3.63MB[3B[3A[2K25f1d6b1951a: Download complete [3B[3A[2K25f1d6b1951a: Extracting 1 s[3B[3A[2K25f1d6b1951a: Extracting 1 s[3B[3A[2K25f1d6b1951a: Pull complete [3BDigest: sha256:d9e853e87e55526f6b2917df91a2115c36dd7c696a35be12163d44e6e2a4b6bc
+Status: Downloaded newer image for alpine:3.20
+docker.io/library/alpine:3.20
+                                                                                                                                                                                           [1m[106m[30mi[0m[0m [96mInfo → [0m[0m [38;5;0m[48;5;14m U [0m In Use
+[39m[1mIMAGE[0m                [39m[1mID[0m             [39m[1mDISK USAGE[0m   [39m[1mCONTENT SIZE[0m   [39m[1mEXTRA[0m
+[34m[1malpine:3.20[0m          [39md9e853e87e55[0m       [39m13.2MB[0m         [39m3.71MB[0m        
+[34m[1mhello-world:latest[0m   [39m5e2309035332[0m       [39m21.8kB[0m         [39m9.49kB[0m   [38;5;0m[48;5;14m U [0m  
+/ # [6n
+/ # [6n [Jcat /etc/os-release
+NAME="Alpine Linux"
+ID=alpine
+VERSION_ID=3.20.10
+PRETTY_NAME="Alpine Linux v3.20"
+HOME_URL="https://alpinelinux.org/"
+BUG_REPORT_URL="https://gitlab.alpinelinux.org/alpine/aports/-/issues"
+/ # hostname
+536aeac7b12d
+/ # ls /
+[1;34mbin[m    [1;34mdev[m    [1;34metc[m    [1;34mhome[m   [1;34mlib[m    [1;34mmedia[m  [1;34mmnt[m    [1;34mopt[m    [1;34mproc[m   [1;34mroot[m   [1;34mrun[m    [1;34msbin[m   [1;34msrv[m    [1;34msys[m    [1;34mtmp[m    [1;34musr[m    [1;34mvar[m
+/ # exit
+]0;pablovip@pablovip:~/oracle-database-lab[?2004h[pablovip@pablovip oracle-database-lab]$ d[7mocker ps -a --filter "name=prueba"[27m
+[7mdocker start -ai prueba[27m[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cocker ps -a --filter "name=prueba"
+docker start -ai prueba
+[?2004lCONTAINER ID   IMAGE         COMMAND   CREATED          STATUS                      PORTS     NAMES
+536aeac7b12d   alpine:3.20   "sh"      35 seconds ago   Exited (0) 12 seconds ago             prueba
+/ # [6necho "dato importante" > /tmp/nota.txt
+/ # cat /tmp/nota.txt
+dato importante
+/ # exit
+]0;pablovip@pablovip:~/oracle-database-lab[?2004h[pablovip@pablovip oracle-database-lab]$ [7mdocker rm prueba[27m
+[7mdocker run -it --name prueba2 alpine:3.20 sh[27m[Adocker rm prueba
+docker run -it --name prueba2 alpine:3.20 sh
+[?2004lprueba
+/ # [6ndocker run -it --rm -v datos-prueba:/datos alpine:3.20 sh
+sh: docker: not found
+/ # [6ndocker run -it --rm -v datos-prueba:/datos alpine:3.20 sh
+sh: docker: not found
+/ # [6nexit
+]0;pablovip@pablovip:~/oracle-database-lab[?2004h[pablovip@pablovip oracle-database-lab]$ [7mdocker ps -a[27m
+[7mdocker volume ls[27m[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdocker ps -a
+docker volume ls
+[?2004lCONTAINER ID   IMAGE         COMMAND    CREATED         STATUS                      PORTS     NAMES
+5362d59e8467   alpine:3.20   "sh"       2 minutes ago   Exited (127) 1 second ago             prueba2
+4f4c4071a4a7   hello-world   "/hello"   2 minutes ago   Exited (0) 2 minutes ago              gallant_panini
+DRIVER    VOLUME NAME
+]0;pablovip@pablovip:~/oracle-database-lab[?2004h[pablovip@pablovip oracle-database-lab]$ [7mdocker run -it --rm -v datos-prueba:/datos alpine:3.20 sh[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdocker run -it --rm -v datos-prueba:/datos alpine:3.20 sh
+[?2004l/ # [6ncat /datos/nota.txt
+cat: can't open '/datos/nota.txt': No such file or directory
+/ # exit
+]0;pablovip@pablovip:~/oracle-database-lab[?2004h[pablovip@pablovip oracle-database-lab]$ [7mdocker volume ls[27mdocker volume ls
+[?2004lDRIVER    VOLUME NAME
+local     datos-prueba
+]0;pablovip@pablovip:~/oracle-database-lab[?2004h[pablovip@pablovip oracle-database-lab]$ [7mdocker run -it --rm -v datos-prueba:/datos alpine:3.20 sh[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdocker run -it --rm -v datos-prueba:/datos alpine:3.20 sh
+[?2004l/ # [6necho "dato importante" > /datos/nota.txt
+/ # [6ncat /datos/nota.txt
+dato importante
+/ # [6nexit
+]0;pablovip@pablovip:~/oracle-database-lab[?2004h[pablovip@pablovip oracle-database-lab]$ [7mdocker run -it --rm -v datos-prueba:/datos alpine:3.20 sh[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdocker run -it --rm -v datos-prueba:/datos alpine:3.20 sh
+[?2004l/ # [6ncat /datos/nota.txt
+dato importante
+/ # [6nexit
+]0;pablovip@pablovip:~/oracle-database-lab[?2004h[pablovip@pablovip oracle-database-lab]$ [7mdocker volume inspect datos-prueba[27mdocker volume inspect datos-prueba
+[?2004l[
+    {
+        "CreatedAt": "2026-09-25T18:55:23+02:00",
+        "Driver": "local",
+        "Labels": null,
+        "Mountpoint": "/var/lib/docker/volumes/datos-prueba/_data",
+        "Name": "datos-prueba",
+        "Options": null,
+        "Scope": "local"
+    }
+]
+]0;pablovip@pablovip:~/oracle-database-lab[?2004h[pablovip@pablovip oracle-database-lab]$ [7mdocker run -it --rm -v datos-prueba:/datos alpine:3.20 sh[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdocker run -it --rm -v datos-prueba:/datos alpine:3.20 sh
+[?2004l/ # [6ncat /datos/nota.txt
+dato importante
+/ # [6nexit
+]0;pablovip@pablovip:~/oracle-database-lab[?2004h[pablovip@pablovip oracle-database-lab]$ [7mdocker run -it --rm -v datos-prueba:/datos alpine:3.20 sh[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdocker run -it --rm -v datos-prueba:/datos alpine:3.20 sh
+[?2004l/ # [6necho "dato importante" > /datos/nota.txt
+/ # [6ncat /datos/nota.txt
+dato importante
+/ # [6nexit
+]0;pablovip@pablovip:~/oracle-database-lab[?2004h[pablovip@pablovip oracle-database-lab]$ [7mdocker run -d --name web -p 8080:80 nginx:alpine[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdocker run -d --name web -p 8080:80 nginx:alpine
+[?2004lUnable to find image 'nginx:alpine' locally
+alpine: Pulling from library/nginx
+
+[1A[2Ke72112c14215: Pulling fs layer [1B
+[1A[2Ke76228b47809: Pulling fs layer [1B
+[1A[2K6c53d0b2a666: Pulling fs layer [1B
+[1A[2K64c8194480fe: Pulling fs layer [1B
+[1A[2Ke2de96513ba9: Pulling fs layer [1B
+[1A[2K745dfb2690dd: Pulling fs layer [1B
+[1A[2Kd9aae54b5831: Pulling fs layer [1B
+[1A[2K9a9a644fdd6a: Pulling fs layer [1B[8A[2Ke72112c14215: Downloading [==>                                                ]  1.049MB/20.53MB[8B[7A[2Ke76228b47809: Download complete [7B[8A[2Ke72112c14215: Downloading [=======>                                           ]  3.146MB/20.53MB[8B[3A[2K745dfb2690dd: Download complete [3B[8A[2Ke72112c14215: Downloading [============>                                      ]  5.243MB/20.53MB[8B[8A[2Ke72112c14215: Downloading [===============>                                   ]  6.291MB/20.53MB[8B[6A[2K6c53d0b2a666: Download complete [6B[8A[2Ke72112c14215: Downloading [===============>                                   ]  6.291MB/20.53MB[8B[8A[2Ke72112c14215: Downloading [=================>                                 ]   7.34MB/20.53MB[8B[8A[2Ke72112c14215: Downloading [======================>                            ]  9.437MB/20.53MB[8B[8A[2Ke72112c14215: Downloading [=========================>                         ]  10.49MB/20.53MB[8B[5A[2K64c8194480fe: Download complete [5B[8A[2Ke72112c14215: Downloading [============================>                      ]  11.53MB/20.53MB[8B[1A[2K9a9a644fdd6a: Download complete [1B[8A[2Ke72112c14215: Downloading [=================================>                 ]  13.63MB/20.53MB[8B[8A[2Ke72112c14215: Downloading [===================================>               ]  14.68MB/20.53MB[8B[8A[2Ke72112c14215: Downloading [======================================>            ]  15.73MB/20.53MB[8B[8A[2Ke72112c14215: Downloading [===========================================>       ]  17.83MB/20.53MB[8B[8A[2Ke72112c14215: Downloading [=============================================>     ]  18.87MB/20.53MB[8B[8A[2Ke72112c14215: Download complete [8B[2A[2Kd9aae54b5831: Download complete [2B
+[1A[2K0deea27e58d9: Download complete [1B[5A[2Ke2de96513ba9: Downloading [=============>                                     ]  1.049MB/3.85MB[5B[5A[2Ke2de96513ba9: Downloading [=============>                                     ]  1.049MB/3.85MB[5B
+[1A[2Kd54d3939625e: Download complete [1B[6A[2Ke2de96513ba9: Downloading [=============>                                     ]  1.049MB/3.85MB[6B[6A[2Ke2de96513ba9: Downloading [=============>                                     ]  1.049MB/3.85MB[6B[6A[2Ke2de96513ba9: Downloading [===========================>                       ]  2.097MB/3.85MB[6B[6A[2Ke2de96513ba9: Downloading [===========================>                       ]  2.097MB/3.85MB[6B[6A[2Ke2de96513ba9: Downloading [===========================>                       ]  2.097MB/3.85MB[6B[6A[2Ke2de96513ba9: Downloading [========================================>          ]  3.146MB/3.85MB[6B[6A[2Ke2de96513ba9: Download complete [6B[6A[2Ke2de96513ba9: Extracting 1 s[6B[6A[2Ke2de96513ba9: Pull complete [6B[4A[2Kd9aae54b5831: Extracting 1 s[4B[5A[2K745dfb2690dd: Pull complete [5B[8A[2K6c53d0b2a666: Pull complete [8B[3A[2K9a9a644fdd6a: Pull complete [3B[4A[2Kd9aae54b5831: Pull complete [4B[9A[2Ke76228b47809: Pull complete [9B[7A[2K64c8194480fe: Pull complete [7B[10A[2Ke72112c14215: Extracting 1 s[10B[10A[2Ke72112c14215: Extracting 1 s[10B[10A[2Ke72112c14215: Extracting 1 s[10B[10A[2Ke72112c14215: Extracting 1 s[10B[10A[2Ke72112c14215: Extracting 1 s[10B[10A[2Ke72112c14215: Extracting 1 s[10B[10A[2Ke72112c14215: Pull complete [10BDigest: sha256:1ed1b0e1d7652937d6cbdaf4018c7b6fc009a7dd6c3047351e2eddda745de43f
+Status: Downloaded newer image for nginx:alpine
+91954800b4cf16e211889a367adbfbf7b5fef3511a880fb3625c4db7c9cbee3a
+]0;pablovip@pablovip:~/oracle-database-lab[?2004h[pablovip@pablovip oracle-database-lab]$ [7mcat $EVID/script/*_03-tutorial-docker.script.log | more[27m
+[7mgit add $EVID/script/*_03-tutorial-docker.script.log[27m
+[7mgit commit -m "docs(env): record guided Docker practice session[27m
+[A[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccat $EVID/script/*_03-tutorial-docker.script.log | more
+git add $EVID/script/*_03-tutorial-docker.script.log
+git commit -m "docs(env): record guided Docker practice session
+[A
+[?2004lScript iniciado en 2026-09-25 18:52:04+02:00 [TERM="xterm-kitty" TTY="/dev/pts/1" COLUMNS="207" LINES="58"]
+    [38;2;0;0;0m▄[38;2;0;0;0m[48;2;98;98;98m▀[0m[38;2;0;0;0m▄ [38;2;0;0;0m▄[38;2;0;0;0m[48;2;230;115;65m▀[0m[38;2;0;0;0m▄                ╭───────────────────────────────────╮  
+    [38;2;0;0;0m[48;2;0;0;0m▀[0m[38;2;98;98;98m[48;2;197;197;197m▀[0m[38;2;0;0;0m[48;2;98;98;98m▀[0m[38;2;0;0;0m▄[38;2;0;0;0m[48;2;65;65;74m▀[0m[38;2;230;115;65m[48;2;230;115;65m▀[0m[38;2;0;0;0m[48;2;0;0;0m▀
+[0m[38;2;0;0;0m▄[38;2;0;0;0m[48;2;98;98;98m▀[0m[38;2;0;0;0m▄     [38;2;0;0;0m▄ [38;2;0;0;0m▄     │ [34m[39m  kernel  [34m       7.2.7-1-cachyos[39m │
+    [38;2;0;0;0m[48;2;0;0;0m▀[0m[38;2;197;197;197m[48;2;98;98;98m▀[0m[38;2;98;98;98m[48;2;98;98;98m▀[0m[38;2;65;65;74m[48;2;65;65;74m▀[0m[38;2;180;74;57m[48;2;230;115;65m▀[0m[38;2;230;115;65m[48;2;180;74;57m
+▀[0m[38;2;65;65;74m[48;2;65;65;74m▀[0m[38;2;98;98;98m[48;2;197;197;197m▀[0m[38;2;98;98;98m[48;2;98;98;98m▀[0m[38;2;0;0;0m[48;2;0;0;0m▀[0m    [38;2;0;0;0m[48;2;0;0;0m▀[0m[38;2;98;98;98m[48;2;98;98;98m▀[0m[38;
+2;0;0;0m[48;2;98;98;98m▀[0m[38;2;98;98;98m[48;2;98;98;98m▀[0m[38;2;0;0;0m[48;2;0;0;0m▀[0m    │   uptime       1 hour, 7 minutes │
+    [38;2;0;0;0m[48;2;0;0;0m▀[0m[38;2;65;65;74m[48;2;98;98;98m▀[0m[38;2;230;115;65m[48;2;65;65;74m▀[0m[38;2;180;74;57m[48;2;230;115;65m▀[0m[38;2;230;115;65m[48;2;230;115;65m▀[0m[38;2;65;65;74m[48;2;230;115;6
+5m▀[0m[38;2;65;65;74m[48;2;230;115;65m▀[0m[38;2;197;197;197m[48;2;65;65;74m▀[0m[38;2;98;98;98m[48;2;98;98;98m▀[0m[38;2;0;0;0m[48;2;98;98;98m▀[0m[38;2;0;0;0m▄    [38;2;0;0;0m[48;2;0;0;0m▀[0m[38;2;98;98;98m[48
+;2;230;115;65m▀[0m[38;2;98;98;98m[48;2;230;115;65m▀[0m[38;2;0;0;0m[48;2;0;0;0m▀[0m    │ [34m[39m  shell   [34m                  bash[39m │
+ [38;2;0;0;0m▄[38;2;0;0;0m▄[38;2;0;0;0m[48;2;0;0;0m▀[0m[38;2;230;115;65m[48;2;65;65;74m▀[0m[38;2;230;115;65m[48;2;230;115;65m▀[0m[38;2;65;65;74m[48;2;230;115;65m▀[0m[38;2;230;115;65m[48;2;230;115;65m▀[0m[38;
+2;65;65;74m[48;2;230;115;65m▀[0m[38;2;65;65;74m[48;2;230;115;65m▀[0m[38;2;65;65;74m[48;2;230;115;65m▀[0m[38;2;65;65;74m[48;2;230;115;65m▀[0m[38;2;65;65;74m[48;2;230;115;65m▀[0m[38;2;98;98;98m[48;2;65;65;74m▀
+[0m[38;2;0;0;0m[48;2;0;0;0m▀[0m   [38;2;0;0;0m▄[38;2;0;0;0m[48;2;180;74;57m▀[0m[38;2;98;98;98m[48;2;180;74;57m▀[0m[38;2;0;0;0m[48;2;0;0;0m▀[0m     │ [32m[39m  mem     [32m  5.93 GiB / 15.06 GiB[39m │
+[38;2;0;0;0m▀[38;2;180;74;57m[48;2;0;0;0m▀[0m[38;2;180;74;57m[48;2;180;74;57m▀[0m[38;2;65;65;74m[48;2;65;65;74m▀[0m[38;2;205;189;49m[48;2;205;189;49m▀[0m[38;2;65;65;74m[48;2;65;65;74m▀[0m[38;2;230;115;65m[48
+;2;230;115;65m▀[0m[38;2;230;115;65m[48;2;65;65;74m▀[0m[38;2;230;115;65m[48;2;65;65;74m▀[0m[38;2;65;65;74m[48;2;0;0;0m▀[0m[38;2;65;65;74m[48;2;255;238;49m▀[0m[38;2;65;65;74m[48;2;255;238;49m▀[0m[38;2;65;65;74
+m[48;2;0;0;0m▀[0m[38;2;98;98;98m[48;2;98;98;98m▀[0m[38;2;0;0;0m[48;2;65;65;74m▀[0m[38;2;0;0;0m▄[38;2;0;0;0m▄[38;2;0;0;0m▄[38;2;0;0;0m[48;2;65;65;74m▀[0m[38;2;65;65;74m[48;2;65;65;74m▀[0m[38;2;0;0;0m[48;2;0;0
+;0m▀[0m      │ [32m[39m  cpu%    [32m                    7%[39m │
+[38;2;0;0;0m▀[38;2;180;74;57m[48;2;0;0;0m▀[0m[38;2;180;74;57m[48;2;0;0;0m▀[0m[38;2;180;74;57m[48;2;0;0;0m▀[0m[38;2;65;65;74m[48;2;0;0;0m▀[0m[38;2;98;98;98m[48;2;197;197;197m▀[0m[38;2;98;98;98m[48;2;197;197;1
+97m▀[0m[38;2;0;0;0m[48;2;180;74;57m▀[0m[38;2;255;238;49m[48;2;0;0;0m▀[0m[38;2;180;74;57m[48;2;255;238;49m▀[0m[38;2;255;238;49m[48;2;255;238;49m▀[0m[38;2;255;238;49m[48;2;0;0;0m▀[0m[38;2;0;0;0m[48;2;180;74;57
+m▀[0m[38;2;98;98;98m[48;2;230;115;65m▀[0m[38;2;65;65;74m[48;2;230;115;65m▀[0m[38;2;98;98;98m[48;2;65;65;74m▀[0m[38;2;98;98;98m[48;2;65;65;74m▀[0m[38;2;98;98;98m[48;2;98;98;98m▀[0m[38;2;65;65;74m[48;2;98;98;9
+8m▀[0m[38;2;0;0;0m[48;2;0;0;0m▀[0m       │ [34m󰢮[39m  gpu%    [34m                  0.0%[39m │
+     [38;2;0;0;0m▀[38;2;230;115;65m[48;2;0;0;0m▀[0m[38;2;230;115;65m[48;2;0;0;0m▀[0m[38;2;180;74;57m[48;2;230;115;65m▀[0m[38;2;0;0;0m[48;2;230;115;65m▀[0m[38;2;0;0;0m[48;2;230;115;65m▀[0m[38;2;180;74;57m[48;
+2;230;115;65m▀[0m[38;2;230;115;65m[48;2;230;115;65m▀[0m[38;2;230;115;65m[48;2;230;115;65m▀[0m[38;2;230;115;65m[48;2;65;65;74m▀[0m[38;2;230;115;65m[48;2;65;65;74m▀[0m[38;2;230;115;65m[48;2;65;65;74m▀[0m[38;2;
+65;65;74m[48;2;230;115;65m▀[0m[38;2;230;115;65m[48;2;230;115;65m▀[0m[38;2;0;0;0m[48;2;0;0;0m▀[0m       │   pkgs                      1455 │
+       [38;2;0;0;0m▄[38;2;0;0;0m[48;2;255;238;49m▀[0m[38;2;65;65;74m[48;2;205;189;49m▀[0m[38;2;65;65;74m[48;2;65;65;74m▀[0m[38;2;65;65;74m[48;2;230;115;65m▀[0m[38;2;65;65;74m[48;2;230;115;65m▀[0m[38;2;230;11
+5;65m[48;2;65;65;74m▀[0m[38;2;230;115;65m[48;2;65;65;74m▀[0m[38;2;65;65;74m[48;2;180;74;57m▀[0m[38;2;180;74;57m[48;2;0;0;0m▀[0m[38;2;230;115;65m[48;2;0;0;0m▀[0m[38;2;230;115;65m[48;2;180;74;57m▀[0m[38;2;180;
+74;57m[48;2;65;65;74m▀[0m[38;2;0;0;0m[48;2;0;0;0m▀[0m      │ [34m[39m  user    [34m              pablovip[39m │
+       [38;2;0;0;0m▀[38;2;230;115;65m[48;2;0;0;0m▀[0m[38;2;255;238;49m[48;2;65;65;74m▀[0m[38;2;65;65;74m[48;2;180;74;57m▀[0m[38;2;230;115;65m[48;2;65;65;74m▀[0m[38;2;230;115;65m[48;2;230;115;65m▀[0m[38;2;230
+;115;65m[48;2;230;115;65m▀[0m[38;2;180;74;57m[48;2;0;0;0m▀[0m[38;2;0;0;0m▀ [38;2;0;0;0m▄[38;2;0;0;0m[48;2;180;74;57m▀[0m[38;2;65;65;74m[48;2;180;74;57m▀[0m[38;2;0;0;0m[48;2;0;0;0m▀[0m      │   hname        
+         pablovip │
+       [38;2;0;0;0m▄[38;2;0;0;0m[48;2;180;74;57m▀[0m[38;2;65;65;74m[48;2;180;74;57m▀[0m[38;2;65;65;74m[48;2;65;65;74m▀[0m[38;2;65;65;74m[48;2;65;65;74m▀[0m[38;2;98;98;98m[48;2;98;98;98m▀[0m[38;2;98;98;98m[48
+;2;98;98;98m▀[0m[38;2;0;0;0m[48;2;0;0;0m▀[0m   [38;2;0;0;0m▀[38;2;0;0;0m▀       │ [36m󰻀[39m  distro  [36m               CachyOS[39m │
+        [38;2;0;0;0m▀[38;2;0;0;0m▀[38;2;0;0;0m[48;2;0;0;0m▀[0m[38;2;230;115;65m[48;2;0;0;0m▀[0m[38;2;230;115;65m[48;2;0;0;0m▀[0m[38;2;0;0;0m▀             ╰───────────────────────────────────╯  
+]0;pablovip@pablovip:~/oracle-database-lab[?2004h[pablovip@pablovip oracle-database-lab]$ [7mdocker version[27m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[?2004l
+ Version:           29.8.1
+ API version:       1.56
+ Go version:        go1.27.1-X:nodwarf5
+ Git commit:        4a63305d74
+ Built:             Fri Sep 18 16:01:02 2026
+ OS/Arch:           linux/amd64
+ Context:           default
+
+[7m--Más--[27mServer:[K
+[7m--Más--[27m Engine:
+[7m--Más--[27m  Version:          29.8.1
+  API version:      1.56 (minimum version 1.40)
+  Go version:       go1.27.1-X:nodwarf5
+  Git commit:       464cd50c3d
+  Built:            Fri Sep 18 16:01:02 2026
+  OS/Arch:          linux/amd64
+  Experimental:     false
+ containerd:
+  Version:          v2.4.0
+  GitCommit:        a7fe631d96c08fb14cf8eff0afdc280e99c30a94.m
+ runc:
+  Version:          1.5.1
+  GitCommit:        1.5.1-1-0-gce23c4c-dirty
+ docker-init:
+  Version:          0.19.0
+  GitCommit:        de40ad0
+Client:
+ Version:    29.8.1
+ Context:    default
+ Debug Mode: false
+ Plugins:
+  buildx: Docker Buildx (Docker Inc.)
+    Version:  0.37.1
+    Path:     /usr/lib/docker/cli-plugins/docker-buildx
+  compose: Docker Compose (Docker Inc.)
+    Version:  5.5.1
+    Path:     /usr/lib/docker/cli-plugins/docker-compose
+
+[7m--Más--[27mServer:[K
+[7m--Más--[27m Containers: 0
+[7m--Más--[27m  Running: 0
+[7m--Más--[27m  Paused: 0
+[7m--Más--[27m  Stopped: 0
+[7m--Más--[27m Images: 1
+[7m--Más--[27m Server Version: 29.8.1
+[7m--Más--[27m Storage Driver: overlayfs
+[7m--Más--[27m  driver-type: io.containerd.snapshotter.v1
+[7m--Más--[27m Logging Driver: json-file
+[7m--Más--[27m[K[?2004h> ^C[?2004l[?2004h[?2004l
+]0;pablovip@pablovip:~/oracle-database-lab[?2004h[pablovip@pablovip oracle-database-lab]$ 
+[?2004l]0;pablovip@pablovip:~/oracle-database-lab[?2004h[pablovip@pablovip oracle-database-lab]$ 
+[?2004l]0;pablovip@pablovip:~/oracle-database-lab[?2004h[pablovip@pablovip oracle-database-lab]$ 
+[?2004l]0;pablovip@pablovip:~/oracle-database-lab[?2004h[pablovip@pablovip oracle-database-lab]$ git commit -m "docs(env): record guided Docker practice session
+[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[11Padd $EVID/script/*_03-tutorial-docker.script.log
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccat $EVID/script/*_03-tutorial-docker.script.log | more[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[7Pdocker run -d --name web -p 8080:80 nginx:alpin[Cit --rm -v datos-prueba:/datos alpine:3.20 sh[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[23Pvolume inspect datos-prueba[K[K[K[K^C[?2004l[?2004h[?2004l
+]0;pablovip@pablovip:~/oracle-database-lab[?2004h[pablovip@pablovip oracle-database-lab]$ ^C[?2004l[?2004h[?2004l
+]0;pablovip@pablovip:~/oracle-database-lab[?2004h[pablovip@pablovip oracle-database-lab]$ a
+[?2004lbash: a: orden no encontrada
+]0;pablovip@pablovip:~/oracle-database-lab[?2004h[pablovip@pablovip oracle-database-lab]$ 
+Script terminado en 2026-09-25 20:07:15+02:00 [CÓDIGO_SALIDA_ORDEN="0"]
