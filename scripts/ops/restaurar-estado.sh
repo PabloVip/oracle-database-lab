@@ -3,9 +3,10 @@
 # Uso: bash scripts/ops/restaurar-estado.sh <carpeta-de-la-copia> [--si]
 set -euo pipefail
 source scripts/deployment/env/00-config.sh
+docker info > /dev/null 2>&1 || { echo "ERROR: Docker no responde (¿está arrancado Docker Desktop o el servicio docker?). No se ha tocado nada." >&2; exit 1; }
 
 ORIGEN="${1:?Uso: restaurar-estado.sh <carpeta en backups/> [--si]}"
-ORIGEN="$(cd "$ORIGEN" && pwd)"   # ruta absoluta: docker -v la exige
+ORIGEN="$(cd "$ORIGEN" && pwd)"          # ruta absoluta: docker -v la exige
 CONFIRMAR="${2:-}"
 
 echo "== 1. Integridad de la copia (SHA-256) =="

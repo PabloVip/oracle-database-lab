@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 # scripts/deployment/env/05-crear-contenedor.sh — versión 2 (Lab 4)
 # Cambios frente al Lab 3:
-# - Ya no publica 8181: ORDS se instaló en Linux (Parte M del Lab 3) y escucha en $ORDS_PORT (8080),
-#   fuera del contenedor; dentro del contenedor nadie escuchaba en 8181.
-# - Si el volumen YA contiene una base de datos, no pasa ninguna contraseña: la imagen solo la usa
-#   al crear la base la primera vez. Menos secretos en `docker inspect` = menos superficie de ataque.
+#  - Ya no publica 8181: ORDS se instaló en Linux (Parte M del Lab 3) y escucha en $ORDS_PORT (8080),
+#    fuera del contenedor; dentro del contenedor nadie escuchaba en 8181.
+#  - Si el volumen YA contiene una base de datos, no pasa ninguna contraseña: la imagen solo la usa
+#    al crear la base la primera vez. Menos secretos en `docker inspect` = menos superficie de ataque.
 set -euo pipefail
 source scripts/deployment/env/00-config.sh
-if docker ps -a --format '{{.Names}}' | grep -qx "$CONT_NAME"; then
+if docker ps -a --format '{{.Names}}' | grep -x "$CONT_NAME" > /dev/null; then
   echo "El contenedor $CONT_NAME ya existe; no se crea de nuevo."
   docker ps -a --filter "name=$CONT_NAME"
   exit 0
