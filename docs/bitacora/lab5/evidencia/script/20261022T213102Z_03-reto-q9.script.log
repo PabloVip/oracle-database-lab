@@ -1,0 +1,13 @@
+
+Session altered.
+
+===== Reto D: Q9 con IX_PED_FECHA tal cual =====
+Q9 actual		       filas=	  20  lecturas l??gicas=      5  f??sicas=    0       .1 ms
+			       plan: COUNT STOPKEY > VIEW > TABLE ACCESS BY INDEX ROWID PEDIDO > INDEX FULL SCAN DESCENDING IX_PED_FECHA
+===== Tamaño de la tabla y del índice actual (lo que costaría duplicar la tabla en un índice cubriente) =====
+
+SEGMENT_NAME	 SEGMENT_TYPE		    MB
+---------------- ------------------ ----------
+IX_PED_FECHA	 INDEX			    22
+PEDIDO		 TABLE			    42
+PK_PEDIDO	 INDEX			    16
