@@ -1,0 +1,19 @@
+===== Cambios de log por hora (v$log_history, hoy) =====
+
+HORA		 CAMBIOS
+------------- ----------
+2026-10-22 20	       1
+2026-10-22 21	       9
+===== Redo archivado por hora (MB), la medida que dimensiona el grupo =====
+
+HORA	      ARCHIVADOS    MB_REDO
+------------- ---------- ----------
+2026-10-22 20	       1	196
+2026-10-22 21	       9       1443
+===== Tamaño actual de los grupos =====
+
+    GROUP#	   MB	 MEMBERS
+---------- ---------- ----------
+	 1	  200	       2
+	 2	  200	       2
+	 3	  200	       2
