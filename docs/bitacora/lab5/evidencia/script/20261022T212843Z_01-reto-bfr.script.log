@@ -1,0 +1,19 @@
+===== Reto B: filas por bloque de TIENDASUR.PEDIDO (DBMS_ROWID) frente a NUM_ROWS / BLOCKS =====
+
+ MIN_FILAS MEDIA_FILAS	MAX_FILAS BLOQUES_CON_FILAS
+---------- ----------- ---------- -----------------
+	 2	 191.6	      200	       5220
+
+  NUM_ROWS     BLOCKS BFR_ESTADISTICAS AVG_ROW_LEN
+---------- ---------- ---------------- -----------
+   1000000	 5320		   188		32
+-- Distribución: cuántos bloques tienen cada número de filas
+
+FILAS_EN_BLOQUE    BLOQUES
+--------------- ----------
+	    192       2867
+	    191       2301
+	    197 	43
+	    196 	 7
+	    200 	 1
+	      2 	 1

@@ -1,0 +1,10 @@
+===== Antes del UPDATE =====
+
+ESTIMATED_MTTR ACTUAL_REDO_BLKS RECOVERY_ESTIMATED_IOS
+-------------- ---------------- ----------------------
+	    44		    109 		    14
+===== Justo después del UPDATE de 20 000 filas + COMMIT (sin checkpoint) =====
+
+ESTIMATED_MTTR ACTUAL_REDO_BLKS RECOVERY_ESTIMATED_IOS
+-------------- ---------------- ----------------------
+	    44		   3772 		   357

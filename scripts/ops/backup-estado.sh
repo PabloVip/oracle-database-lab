@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
 # scripts/ops/backup-estado.sh — copia en frío y consistente del estado del laboratorio.
 # Copia el volumen completo y, si los hay, los archivos de la base que viven FUERA del volumen.
-# Uso: bash scripts/ops/backup-estado.sh <etiqueta-en-kebab-case>   (p. ej.: lab3-final)
+# Uso: bash scripts/ops/backup-estado.sh <etiqueta-en-kebab-case>     (p. ej.: lab3-final)
 set -euo pipefail
 source scripts/deployment/env/00-config.sh
+docker info > /dev/null 2>&1 || { echo "ERROR: Docker no responde (¿está arrancado Docker Desktop o el servicio docker?). No se ha tocado nada." >&2; exit 1; }
 
 ETIQUETA="${1:?Uso: backup-estado.sh <etiqueta, p. ej. lab3-final>}"
 [[ "$ETIQUETA" =~ ^[a-z0-9][a-z0-9-]*$ ]] || { echo "La etiqueta debe ir en kebab-case (p. ej. lab3-final)"; exit 2; }

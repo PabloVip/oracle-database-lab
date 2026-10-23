@@ -1,0 +1,13 @@
+
+Session altered.
+
+===== Reto F: consulta del PR (rota) =====
+PR rota 		       filas=	 981  lecturas l??gicas=   1487  f??sicas=    0     14.5 ms
+			       plan: TABLE ACCESS FULL CLIENTE
+===== Reescrita: LIKE '600%' (sargable) + UPPER(apellidos) servida por un índice funcional =====
+PR reescrita OR 	       filas=	 981  lecturas l??gicas=    722  f??sicas=    0      2.1 ms
+			       plan: TABLE ACCESS BY INDEX ROWID BATCHED CLIENTE > BITMAP CONVERSION TO ROWIDS > BITMAP OR > BITMAP CONVERSION FROM ROWIDS > SORT ORDER BY > INDEX RANGE SCAN IX_CLI_TEL
+EFONO > BITMAP CONVERSION FROM ROWIDS > INDEX RANGE SCAN IX_CLI_UPPER_APELLIDOS
+PR reescrita UNION ALL	       filas=	 981  lecturas l??gicas=   1490  f??sicas=    0      5.1 ms
+			       plan: UNION-ALL > TABLE ACCESS FULL CLIENTE > TABLE ACCESS BY INDEX ROWID BATCHED CLIENTE > INDEX RANGE SCAN IX_CLI_UPPER_APELLIDOS
+===== Limpieza =====

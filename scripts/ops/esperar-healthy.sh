@@ -12,7 +12,7 @@ for ((t = 0; t <= MAX; t += 10)); do
   modo=$(printf 'WHENEVER SQLERROR EXIT 1\nSET HEADING OFF FEEDBACK OFF PAGESIZE 0\n%s\nEXIT\n' "$SONDA" \
          | docker exec -i "$CONT_NAME" sqlplus -s -L / as sysdba 2> /dev/null | tr -d '[:space:]') || modo=""
   case "$modo" in *ORA-*|*ERROR*) modo="" ;; esac
-  echo "  t=${t}s docker=$salud cdb/pdb=${modo:-no-disponible}"
+  echo "  t=${t}s  docker=$salud  cdb/pdb=${modo:-no-disponible}"
   if [ "$modo" = "READWRITE/READWRITE" ]; then exit 0; fi
   sleep 10
 done
