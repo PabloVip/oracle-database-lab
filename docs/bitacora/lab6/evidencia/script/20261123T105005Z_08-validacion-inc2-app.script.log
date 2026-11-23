@@ -1,0 +1,29 @@
+== EVIDENCIA alumno=E065 hora=2026-11-23T10:50:05Z origen=06-app-sigue
+== EVIDENCIA contenedor=97a77b58859a dbid=1509902213 arranque=2026-11-23T10:24:07 scn=4325308
+
+ROLE
+--------------------
+ROL_APP_ACADEMIA
+
+1 fila seleccionada. 
+
+
+ESTUDIANTES
+-----------
+      17600
+
+1 fila seleccionada. 
+
+
+1 fila actualizadas.
+
+Rollback terminado.
+-- Ya no puede insertar en el histórico (el permiso temporal de la Parte F se retiró): error esperado
+
+Error que empieza en la línea : 12 Archivo @ file:/home/pablovip/oracle-database-lab/scripts/lab6/06-app-sigue.sql
+del comando -
+INSERT INTO carga_hist.registro (id, relleno) VALUES (-1, 'x')
+Error en la línea de comandos : 12 Columna : 24 Archivo @ file:/home/pablovip/oracle-database-lab/scripts/lab6/06-app-sigue.sql
+Informe de error -
+Error SQL: ORA-00942: La tabla o vista  "CARGA_HIST"."REGISTRO" no existe
+Help: https://docs.oracle.com/error-help/db/ora-00942/
