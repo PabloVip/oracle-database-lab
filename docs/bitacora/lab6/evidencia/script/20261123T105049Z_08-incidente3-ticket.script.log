@@ -1,0 +1,10 @@
+== EVIDENCIA alumno=E065 hora=2026-11-23T10:50:49Z origen=08-guardia-incidente3
+== EVIDENCIA contenedor=97a77b58859a dbid=1509902213 arranque=2026-11-23T10:24:07 scn=4325374
+
++----------------------------------------------------------------------------+
+| TICKET INC-603 · prioridad ALTA · 10:50 UTC                                |
+| Equipo de matrículas: «Tras el despliegue de las 21:00, la aplicación no   |
+| entra: ORA-28000. No hemos cambiado la contraseña».                        |
+| Nota del turno de tarde: hoy se ejecutó el script trimestral de bajas.     |
++----------------------------------------------------------------------------+
+

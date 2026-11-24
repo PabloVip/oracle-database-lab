@@ -1,0 +1,10 @@
+== EVIDENCIA alumno=E065 hora=2026-11-23T10:46:03Z origen=08-guardia-incidente1
+== EVIDENCIA contenedor=97a77b58859a dbid=1509902213 arranque=2026-11-23T10:24:07 scn=4325025
+
++----------------------------------------------------------------------------+
+| TICKET INC-601 · prioridad ALTA · 10:46 UTC                                |
+| Secretaría (Ana García): «Al guardar la ficha del alumno 101 la pantalla   |
+| se queda colgada. Ya he reiniciado mi ordenador dos veces».                |
+| Base afectada: FREEPDB1 (Academia).                                        |
++----------------------------------------------------------------------------+
+

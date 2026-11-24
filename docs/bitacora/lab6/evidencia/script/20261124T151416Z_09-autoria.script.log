@@ -1,0 +1,9 @@
+== EVIDENCIA alumno=E065 hora=2026-11-24T15:14:16Z origen=09-autoria
+== EVIDENCIA contenedor=97a77b58859a dbid=1509902213 arranque=2026-11-24T08:28:36 scn=4373387
+  [OK]    código de alumno E065 en config/.env
+  [OK]    docs/bitacora/lab6-ia.md con 21 entrada(s) declarada(s)
+  [OK]    primera línea: «He leído la política de uso de IA de la asignatura.»
+  [OK]    ningún archivo de agente de IA (.claude/, CLAUDE.md, AGENTS.md, .cursor/…)
+  [OK]    ningún commit con firma o coautor de IA (lab5-final..HEAD)
+  [OK]    respuestas sin marcas de texto generado
+  [OK]    45 evidencias con tu cabecera (E065) y una sola base de datos

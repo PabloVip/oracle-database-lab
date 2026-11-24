@@ -1,0 +1,31 @@
+# Lab 6 — Guardia nocturna · Postmortems
+
+## INC-601 · La pantalla de secretaría se queda colgada al guardar el alumno 101
+
+- Detección: 10:46:03 UTC · Ana García (secretaría) abrió el ticket INC-601: al guardar la ficha del alumno 101 la pantalla se quedaba colgada, y ya había reiniciado su ordenador dos veces sin que sirviera de nada.
+- Impacto: Ana no pudo guardar la ficha del alumno 101 durante unos 80 segundos (el bloqueo empezó a las 10:46:02 y en ASH sigue esperando hasta las 10:47:23). Solo afectaba a esa fila; el resto de la base funcionaba normal.
+- Diagnóstico: en `08-diagnostico-inc1`, el apartado 1 muestra a ANA_GARCIA (SID 45) esperando en enq: TX - row lock contention, de la clase Application, con BLOQ = 175. El SID 175 es APP_ACADEMIA (matriculas / cierre-periodo) y estaba en PL/SQL lock timer, o sea, parado sin hacer nada. El apartado 2 dice que la fila es de ACA_ESTUDIANTES, el apartado 3 que el 175 tiene el TX (LMODE 6, BLOCK 1) y el 45 lo pide (REQUEST 6), y el apartado 4 que el bloqueador tenía 1 registro de undo sin confirmar desde las 10:46:02.
+- Causa raíz: el proceso de cierre de periodo de la aplicación actualiza la fila 101 y deja la transacción abierta sin confirmar mientras sigue haciendo otras cosas. Mientras no hace COMMIT, la fila queda bloqueada y cualquier usuario que intente guardarla se queda esperando. No era un fallo de la base ni del ordenador de Ana.
+- Intervención: `ALTER SYSTEM KILL SESSION '175,65254' IMMEDIATE;` como SYSDBA. Es lo más pequeño posible porque solo toca la sesión que bloquea, no la de Ana (que es la víctima) ni la instancia, y solo se deshace 1 registro de undo. Un CANCEL SQL no habría servido, porque como vi en la Parte D cancela la llamada pero la transacción y el bloqueo siguen.
+- Validación: en `08-intervencion-inc1` sale System altered y el alumno 101 queda en ACTIVO, o sea, la ficha de Ana se guardó. En `08-validacion-inc1` los apartados 1 a 4 salen vacíos (nadie espera y no queda ninguna transacción), y en ASH se ve a Ana esperando por el 175 justo hasta las 10:47:23, el segundo del KILL.
+- Acción preventiva: que el proceso de cierre de periodo haga COMMIT justo después de cada UPDATE y no deje transacciones abiertas mientras espera. Además, una alerta que avise cuando una sesión lleve más de un minuto bloqueando a otra (V$SESSION con BLOCKING_SESSION), para enterarnos antes de que llegue el ticket.
+
+## INC-602 · La aplicación no conecta: ORA-12514
+
+- Detección: 10:48 UTC · el equipo de matrículas abrió el ticket INC-602, prioridad CRÍTICA: ninguna instancia de la aplicación conectaba, les salía ORA-12514 y preguntaban si la base estaba caída (`08-incidente2-ticket`).
+- Impacto: ninguna instancia de la aplicación de matrículas pudo conectar desde que se abrió el incidente hasta la intervención de las 10:49:14; el resto de la base seguía funcionando.
+- Diagnóstico: en `08-turno-inc2` la instancia estaba OPEN, FREEPDB1 en READ WRITE y sin bloqueos, así que la base no estaba caída; en `08-diagnostico-inc2`, apartado 6, academia_app salía con ARRANCADO = NO y FREEPDB1 con SI, y como ORA-12514 lo da el listener, el problema era que el listener no conocía ese servicio.
+- Causa raíz: toda la aplicación entra únicamente por el servicio academia_app, así que si ese servicio no está arrancado no hay otra puerta y se quedan todos fuera; además, nadie vigilaba qué servicios estaban arrancados, por eso solo nos enteramos por el ticket.
+- Intervención: `EXEC DBMS_SERVICE.START_SERVICE('academia_app')` y `ALTER PLUGGABLE DATABASE FREEPDB1 SAVE STATE;` (`08-intervencion-inc2`): arranqué solo el servicio que faltaba y no reinicié la base, porque estaba bien y un reinicio habría echado a todos los demás usuarios; aunque el servicio hubiera vuelto solo, reiniciar habría sido desproporcionado.
+- Validación: en `08-validacion-inc2-listener` academia_app aparece READY, en `08-validacion-inc2-app` la aplicación conecta por el servicio y lee 17600 estudiantes, y en `08-validacion-inc2-tras-reinicio`, después de un reinicio real del portátil, academia_app volvió a estar arrancado sin hacer nada.
+- Acción preventiva: el SAVE STATE, para que el servicio vuelva solo en cada arranque, y añadir a la lista de turno la comprobación del apartado 6 de `08-diagnostico` (cualquier servicio con ARRANCADO = NO es una alerta) y lanzar `validar-arranque` después de cada reinicio para confirmar que academia_app está entre los servicios activos.
+
+## INC-603 · La aplicación no entra: ORA-28000
+
+- Detección: 10:50 UTC · el equipo de matrículas abrió el ticket INC-603, prioridad ALTA: tras el despliegue la aplicación no entraba por ORA-28000 y no habían cambiado la contraseña; además, la nota del turno de tarde decía que ese día se había ejecutado el script trimestral de bajas (`08-incidente3-ticket`).
+- Impacto: la aplicación de matrículas no pudo entrar en la base desde el bloqueo de las 10:50 hasta el desbloqueo de las 10:51:45.
+- Diagnóstico: en `08-sintoma-inc3` la aplicación recibe ORA-28000 al conectar por academia_app, y en `08-diagnostico-inc3`, apartado 7, APP_ACADEMIA está en LOCKED y no en LOCKED(TIMED), bloqueada a las 10:50 y con el perfil DEFAULT de 10 intentos, así que no se bloqueó sola por contraseñas erróneas: la bloqueó alguien o un script.
+- Causa raíz: el script trimestral de bajas no distingue las cuentas de personas de las cuentas de aplicación, y bloqueó APP_ACADEMIA como si fuera la cuenta de alguien que se ha ido.
+- Intervención: `ALTER USER app_academia ACCOUNT UNLOCK;` (`08-intervencion-inc3`): solo desbloqueé la cuenta, sin cambiar la contraseña, porque el equipo no la había tocado y el problema nunca fue la contraseña; si la cambiaba, la aplicación desplegada dejaría de entrar con otro error.
+- Validación: en `08-validacion-inc3-app` la aplicación vuelve a entrar por academia_app con su rol y lee 17600 estudiantes, y en `08-validacion-inc3` el apartado 7 sale vacío, sin ninguna cuenta bloqueada.
+- Acción preventiva: que el script de bajas solo actúe sobre las cuentas con el perfil de personas (PRF_PERSONAS) y que las cuentas de aplicación tengan su propio perfil, para que no se puedan confundir; además, revisar el apartado 7 de `08-diagnostico` después de cada ejecución del script de bajas.
