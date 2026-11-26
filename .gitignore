@@ -2,3 +2,4 @@ config/.env
 backups/
 .DS_Store
 scripts/t6/salidas/
+*.ora
