@@ -1,0 +1,46 @@
+== EVIDENCIA alumno=E065 hora=2026-11-26T19:04:50Z origen=t6/estad
+== EVIDENCIA contenedor=97a77b58859a dbid=1509902213 arranque=2026-11-26T18:03:50 scn=4413037
+== 1 · Estadísticas de la tabla T6.CLIENTE ==
+
+TABLE_NAME           NUM_ROWS     BLOCKS AVG_ROW_LEN LAST_ANALYZED       STALE LOCKED
+------------------ ---------- ---------- ----------- ------------------- ----- ------
+CLIENTE                100000       1453          98 2026-11-26 19:04:47 NO
+== 2 · Cambios desde la última recogida (DBA_TAB_MODIFICATIONS; obsoleta si pasan del 10 %) ==
+== 3 · Columnas: lo que sabe el optimizador de cada una ==
+
+COLUMN_NAME                    NUM_DISTINCT  NUM_NULLS   DENSITY    BUCKETS HISTOGRAM       LAST_ANALYZED
+------------------------------ ------------ ---------- --------- ---------- --------------- -------------------
+APELLIDOS                               224          0  0.004464          1 NONE            2026-11-26 19:04:47
+CIUDAD                                 2000          0  0.000500          1 NONE            2026-11-26 19:04:47
+COMUNIDAD                                18          0  0.055556          1 NONE            2026-11-26 19:04:47
+DNI                                   98680          0  0.000010          1 NONE            2026-11-26 19:04:47
+EMAIL                                 99328          0  0.000010          1 NONE            2026-11-26 19:04:47
+FECHA_ALTA                             2851          0  0.000351          1 NONE            2026-11-26 19:04:47
+ID_CLIENTE                           100000          0  0.000010          1 NONE            2026-11-26 19:04:47
+NOMBRE                                  500          0  0.002000          1 NONE            2026-11-26 19:04:47
+PAIS                                     40          0  0.025000          1 NONE            2026-11-26 19:04:47
+== 4 · Extensiones (grupos de columnas y expresiones) ==
+== 5 · Estadísticas PENDIENTES (recogidas con PUBLISH = FALSE, aún sin publicar) ==
+== 6 · Historial: versiones anteriores que se pueden restaurar ==
+
+CUANDO
+-------------------
+2026-11-26 19:04:47
+2026-11-26 18:45:28
+2026-11-26 18:44:57
+2026-11-26 18:07:04
+== 7 · Preferencias que usará la próxima recogida ==
+
+PREFERENCIA
+-------------
+VALOR
+----------------------------------------------------------------------------------------------------------------------------------
+PUBLISH
+TRUE
+
+METHOD_OPT
+FOR ALL COLUMNS SIZE 1
+
+STALE_PERCENT
+10
+

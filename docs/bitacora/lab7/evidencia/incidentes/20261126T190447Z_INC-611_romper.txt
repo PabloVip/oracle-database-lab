@@ -1,0 +1,7 @@
+== EVIDENCIA alumno=E065 hora=2026-11-26T19:04:47Z origen=t6/INC-611_romper
+== EVIDENCIA contenedor=97a77b58859a dbid=1509902213 arranque=2026-11-26T18:03:50 scn=4412754
+== INC-611 · romper · alumno E065 · semilla 65
+
+Session altered.
+
+Roto: el listado de clientes por ciudad y comunidad estima mal (mira tu ciudad en la primera línea de verificar).

@@ -1,0 +1,7 @@
+== EVIDENCIA alumno=E065 hora=2026-11-26T19:00:29Z origen=t6/INC-605_romper
+== EVIDENCIA contenedor=97a77b58859a dbid=1509902213 arranque=2026-11-26T18:03:50 scn=4409154
+== INC-605 · romper · alumno E065 · semilla 65
+
+Session altered.
+
+Roto: el informe de cestas abandonadas (módulo informes) ya no es el de ayer.
