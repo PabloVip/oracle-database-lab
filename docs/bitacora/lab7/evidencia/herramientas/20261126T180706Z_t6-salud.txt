@@ -1,0 +1,41 @@
+== EVIDENCIA alumno=E065 hora=2026-11-26T18:07:06Z origen=t6/salud
+== EVIDENCIA contenedor=97a77b58859a dbid=1509902213 arranque=2026-11-26T18:03:50 scn=4387981
+== 1 · Carga frente a capacidad: AAS por minuto (V$CON_SYSMETRIC_HISTORY) y CPU_COUNT ==
+
+MINUT        AAS
+----- ----------
+18:04          0
+18:05          0
+18:06          0
+
+SEMAFORO
+----------------------------------------------------------------------------------------------------
+VERDE    AAS máximo 0 con CPU_COUNT 2: hay holgura
+== 2 · En qué se va el tiempo (ASH, muestras de 1 s de sesiones activas de esta PDB) ==
+
+WAIT_CLASS     EVENTO                                     MUESTRAS    PCT
+-------------- ---------------------------------------- ---------- ------
+User I/O       direct path write                                 4   40.0
+CPU            ON CPU                                            4   40.0
+User I/O       db file scattered read                            1   10.0
+User I/O       db file sequential read                           1   10.0
+== 3 · Quién lo consume: SQL_ID y módulo con más muestras ==
+
+SQL_ID        MODULE           ACTION           MUESTRAS    PCT TEXTO
+------------- ---------------- -------------- ---------- ------ --------------------------------------------
+g11waymbv1rbq dbms_stats: gath "T6"."IX_T6_PE          1   10.0
+              er index stats   D_CP"
+
+1fm07xd16u5nr dbms_stats: gath T6.CLIENTE              1   10.0 insert /* QOSH:REC_STS */ into sys.wri$_opts
+              er table stats
+
+2dt1vq42sjjv9 sqlplus@97a77b58                         1   10.0
+              859a (TNS V1-V3)
+
+5227ykzxr46kh sqlplus@97a77b58                         1   10.0
+              859a (TNS V1-V3)
+
+g9j3vrysnybhs sys$abs_timeout  Job Queue Timo          1   10.0
+                               ut
+
+-- Siguiente paso: con el SQL_ID de arriba, «t6 plan SQL_ID» (playbook PB-2). Con esperas de una sola clase, PB-1 rama 2.

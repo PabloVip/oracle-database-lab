@@ -1,0 +1,22 @@
+== EVIDENCIA alumno=E065 hora=2026-11-26T18:47:07Z origen=t6/C13_provocar
+== EVIDENCIA contenedor=97a77b58859a dbid=1509902213 arranque=2026-11-26T18:03:50 scn=4397549
+
+SYS@FREE> ALTER SESSION SET CONTAINER = FREEPDB1;
+
+Session altered.
+
+SYS@FREE> SET ECHO OFF
+
+PL/SQL procedure successfully completed.
+
+Table created.
+
+SYS@FREE> UPDATE t6.pedido SET estado = 'E' WHERE id_pedido IN (SELECT id_pedido FROM t6.c13_cambio);
+
+135277 rows updated.
+
+SYS@FREE> COMMIT;
+
+Commit complete.
+
+SYS@FREE> EXIT

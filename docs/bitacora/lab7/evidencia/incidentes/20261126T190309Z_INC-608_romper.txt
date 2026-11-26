@@ -1,0 +1,7 @@
+== EVIDENCIA alumno=E065 hora=2026-11-26T19:03:09Z origen=t6/INC-608_romper
+== EVIDENCIA contenedor=97a77b58859a dbid=1509902213 arranque=2026-11-26T18:03:50 scn=4410689
+== INC-608 · romper · alumno E065 · semilla 65
+
+Session altered.
+
+Roto: el informe de pedidos por estado de la mañana ya no es el de ayer.
